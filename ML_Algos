@@ -1,5 +1,0 @@
-# Adding PCA for Numeric Features
-pca_train_df <- prcomp(x = x_train_df[-1], scale. = TRUE)
-  pca_matric <- (pca_train_df$sdev ^ 2) / sum((pca_train_df$sdev ^ 2))
-plot(pca_matric)
-plot(cumsum(pca_matric))
