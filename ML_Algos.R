@@ -1,6 +1,9 @@
 # Adding PCA for Numeric Features
+library(ggplot2)
+library(ggfortify)
 pca_train_df <- prcomp(x = x_train_df[-1], scale. = TRUE)
-  pca_matric <- (pca_train_df$sdev ^ 2) / sum((pca_train_df$sdev ^ 2))
+autoplot(pca_train_df, data = train_df, colour = "Survived", loadings = TRUE)
+pca_matric <- (pca_train_df$sdev ^ 2) / sum((pca_train_df$sdev ^ 2))
 plot(pca_matric)
 plot(cumsum(pca_matric))
 train_data <- data.frame(pca_train_df$x[,1:32], Dependent_Variable = y_train_df$Dependent_Variable)
