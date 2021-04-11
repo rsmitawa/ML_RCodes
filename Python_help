@@ -1,0 +1,3 @@
+# Create table in python
+
+print(adult_data_df['income'].value_counts())
