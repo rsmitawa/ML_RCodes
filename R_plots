@@ -1,0 +1,10 @@
+# Plotting latitudes and longitudes in a scatter plot
+prelim_plot <- ggplot(airbnb_df, aes(x = longitude, y = latitude, col = price_label)) +
+  geom_point()
+
+prelim_plot + labs(title = "Geographic Representation of Airbnb Locations", 
+       subtitle = "Grouped by cost per person", 
+       x = "Longituted coordinates of Toronto City", 
+       y = "Latitude coordinates of Toronto City",
+       color = "Cost labels")
+
